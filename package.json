@@ -1,6 +1,6 @@
 {
   "name": "jquery-boot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A jQuery plugin to manage jobs and lazy bootstrapping.",
   "main": "src/jquery-boot.js",
   "scripts": {
