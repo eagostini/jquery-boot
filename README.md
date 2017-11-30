@@ -20,7 +20,7 @@ jQuery.register('inputs', function ($) {
 });
 ```
 
-The keyword `this` refers to the current scope given by the method `boot`. If not supplied, **jQuery(window)** will take place.
+The keyword `this` refers to the current scope given by the method `boot`. If not supplied, **jQuery(document)** will take place.
 
 #### Manually Booting Jobs
 

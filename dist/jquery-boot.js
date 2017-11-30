@@ -14,7 +14,7 @@
      */
     jQuery.boot = function (scope, options) {
         options = options || [];
-        scope = jQuery(scope || window);
+        scope = jQuery(scope || document);
 
         if (!$.isArray(options)) {
             options = [options];
