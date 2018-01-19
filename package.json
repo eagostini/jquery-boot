@@ -1,6 +1,6 @@
 {
   "name": "jquery-boot",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A jQuery plugin to manage jobs and lazy bootstrapping.",
   "main": "src/jquery-boot.js",
   "scripts": {
@@ -34,6 +34,6 @@
     "jquery": "^3.2.1"
   },
   "devDependencies": {
-    "laravel-mix": "^1.4.2"
+    "laravel-mix": "^1.7.2"
   }
 }

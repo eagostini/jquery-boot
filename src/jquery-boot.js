@@ -10,14 +10,19 @@
     /**
      * @param {String|jQuery|Object} [scope]
      * @param {Array} [options]
+     * @param {Boolean} [unbind]
      * @return {jQuery}
      */
-    jQuery.boot = (scope, options) => {
+    jQuery.boot = (scope, options, unbind) => {
         options = options || [];
         scope = jQuery(scope || document);
 
         if (!$.isArray(options)) {
             options = [options];
+        }
+
+        if (unbind) {
+            scope.unbind();
         }
 
         for (let name in pipeline) {
@@ -31,10 +36,11 @@
 
     /**
      * @param {Array} [packages]
+     * @param {Boolean} [unbind]
      * @return {jQuery}
      */
-    jQuery.fn.boot = function (packages) {
-        jQuery.boot(this, packages);
+    jQuery.fn.boot = function (packages, unbind) {
+        jQuery.boot(this, packages, unbind);
 
         return this;
     };
