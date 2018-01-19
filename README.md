@@ -39,6 +39,9 @@ jQuery.get('/a-piece-of-page', function (source) {
         case 'boot-some-jobs':
             return jQuery.boot(piece, ['buttons', 'inputs']);
 
+        case 'boot-some-jobs-with-unbind':
+            return jQuery.boot(piece, ['buttons', 'inputs'], true);
+
         case 'boot-all-jobs-from-element':
             return piece.boot();
 
@@ -48,11 +51,16 @@ jQuery.get('/a-piece-of-page', function (source) {
         case 'boot-some-jobs-from-element':
             return piece.boot(['buttons', 'inputs']);
 
+        case 'boot-some-jobs-from-element-with-unbind':
+            return piece.boot(['buttons', 'inputs'], true);
+
         default:
             return jQuery.boot(); // Boot everything again... I don't know why.
     }
 });
 ```
+
+The argument `unbind` of the method `boot` allows you to unbind all the handlers of the given scope.
 
 ### Considerations
 
